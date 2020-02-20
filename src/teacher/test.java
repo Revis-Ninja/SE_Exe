@@ -16,6 +16,7 @@ public class test {
         String teacher;
         String[] tempName = null;
         while(br.ready()){
+
             teacher=br.readLine();
             if(teacher.equals(name)){
                 tempName = teacher.split("\\|");
@@ -44,6 +45,7 @@ public class test {
                     int birth = Integer.parseInt(tempName[i]);
                     //turn String type into Integer
                     b[i-1]=birth;
+                    //tempName.length is larger than integer[] b
                 }
                 br.close();
                 break;
@@ -74,6 +76,7 @@ public class test {
                 break;
             }
         }
+        br.close();
         return courses;
     }
 
@@ -131,16 +134,17 @@ public class test {
         }
 
         cdir.showTeachers(System.out);
+        //test list of teachers
         System.out.println(cdir.Lor);
-
+        //test list of request
         PTTdir ptt = new PTTdir();
         cdir.submitRequest(ptt);
-
+        //test submit request to PTT director
         cdir.LoTR = getTeachingRequirement();
-
+        //test list of teaching requirement
         Admin ad = new Admin();
-
         cdir.submitTeachingRequirement(ad);
+        //test submit teaching requirement to administrator
 
     }
 }
