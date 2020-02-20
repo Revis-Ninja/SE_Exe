@@ -1,0 +1,18 @@
+Teaching Request:
+Software Engineering
+Advanced Programming
+Programming
+Algorithm
+End of Request
+Teachers:
+zzh|1|11|1111
+mjh|2|22|2222
+cyz|3|33|3333
+zjy|4|44|4444
+End of Teachers
+Teaching Requirement:
+Honest
+Responsible
+Patient
+Responsive
+End of Teaching Requirement
