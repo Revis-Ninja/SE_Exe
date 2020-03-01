@@ -12,7 +12,6 @@ public class date {
         month = m;
         year = y;
     }
-
     public int getYear() {
         return year;
     }

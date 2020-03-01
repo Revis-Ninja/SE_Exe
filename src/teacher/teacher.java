@@ -1,20 +1,13 @@
 package teacher;
 import java.io.*;
-
 import basic.*;
 import management.*;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-
 public class teacher extends person {
-
     ArrayList<String> Loc;
-
     public teacher(String name, date birth){
         super(name,birth);
         Loc = new ArrayList<String>();
-
     }
     public void addCourse(String course){
         Loc.add(course);
@@ -28,22 +21,23 @@ public class teacher extends person {
         this.getBirth().print(ps);
         System.out.println();
         ps.print("list of requested courses: ");
-        for (String course:Loc
-             ) {
+        for (String course:Loc) {
             ps.print(course+", ");
         }
         ps.println();
     }
-
-    public String teachingRequest() throws IOException {
+    public void teachingRequest(String request) throws IOException {
+        //teacher would like to submit request,
+        //and then write to the test.txt file
+        FileWriter test = new FileWriter("test.txt",true);
+        BufferedWriter bw = new BufferedWriter(test);
         File file = new File("test.txt");
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String result = br.readLine();
-        br.close();
-        return result;
+        bw.newLine();
+        bw.write(request);
+        bw.flush();
+        bw.close();
     }
     public void setClassDir(ClassDir cdir){
         cdir.addTeacher(this);
     }
-
 }

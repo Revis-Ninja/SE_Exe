@@ -16,7 +16,6 @@ public class person {
     public String getName(){
         return this.name;
     }
-
     public date getBirth() {
         return birth;
     }

@@ -8,7 +8,7 @@ public class Lot {
     public Lot(){
         array = new ArrayList<teacher>();
     }
-
+    //this class is to store and find teacher info
     public void addTeacher(teacher t){
         array.add(t);
     }
